@@ -1,24 +1,37 @@
-import "./style.css";
-import javascriptLogo from "./javascript.svg";
-import viteLogo from "/vite.svg";
-import { setupCounter } from "./counter.js";
+import { setupLenis } from "./src/scripts/lenis.js";
+import { init } from "./src/scripts/three/init.js";
+const setup = () => {
+  const lenis = setupLenis();
 
-document.querySelector("#app").innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`;
+  // アンカーリンクの設定
+  const anchor = document.querySelector(".js-anchor");
+  anchor.addEventListener("click", () => lenis.scrollTo("#animation"));
 
-setupCounter(document.querySelector("#counter"));
+  // モーダルの設定
+  const openButton = document.querySelector(".js-modal-open-button");
+  const closeButton = document.querySelector(".js-modal-close-button");
+  const modal = document.querySelector("#modal");
+  openButton.addEventListener("click", () => {
+    modal.showModal();
+    lenis.stop();
+  });
+  closeButton.addEventListener("click", () => {
+    modal.close();
+    lenis.start();
+  });
+
+  init(lenis);
+
+  // const log = () => {
+  //   console.log(lenis.animatedScroll, lenis.velocity)
+  //   window.requestAnimationFrame(log);
+  // }
+
+  // log();
+
+  // window.requestAnimationFrame(() => {
+  //   console.log(lenis.animatedScroll, lenis.velocity)
+  // })
+};
+
+setup();
