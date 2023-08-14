@@ -56,6 +56,17 @@ canvas {
   height: 100vh;
 }
 
+.bl_hero_text {
+  font-size: 24px;
+  line-height: 2;
+  text-align: center;
+}
+
+.bl_hero_text > span {
+  padding: 4px 8px;
+  background: rgb(255 255 255 / 50%);
+}
+
 .bl_section {
   position: relative;
   display: flex;
@@ -80,6 +91,11 @@ canvas {
 .bl_section_text {
   font-size: 18px;
   line-height: 1.8;
+}
+
+.bl_section_text > span {
+  padding: 0 4px;
+  background: rgb(255 255 255 / 50%);
 }
 
 .bl_modal {
@@ -120,6 +136,7 @@ canvas {
   text-align: center;
   text-decoration: none;
   background: rgb(255 255 255 / 50%);
+  border: 1px solid #2a2a2a;
   border-radius: 50%;
   box-shadow: 0 4px 8px 0 rgb(42 42 42 / 10%);
   transition: background 0.3s;
@@ -143,7 +160,7 @@ canvas {
   font-size: 18px;
   cursor: pointer;
   background: rgb(255 255 255 / 50%);
-  border: none;
+  border: 1px solid #2a2a2a;
   border-radius: 16px;
   box-shadow: 0 4px 8px 0 rgb(42 42 42 / 10%);
   transition: background 0.3s;
@@ -169,5 +186,15 @@ canvas {
 
   100% {
     transform: translateY(10px);
+  }
+}
+
+@media screen and (width <= 912px) {
+  .bl_hero_text {
+    font-size: 20px;
+  }
+
+  .bl_section_inner {
+    width: 100%;
   }
 }

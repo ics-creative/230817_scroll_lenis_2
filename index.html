@@ -16,7 +16,7 @@
     <main>
       <canvas class="webgl"></canvas>
       <section class="bl_hero">
-        <h1>Welcome to Smooth Scroll Demo</h1>
+        <h1 class="bl_hero_text"><span>Welcome to Smooth Scroll Demo</span></h1>
         <a href="#animation" class="el_anchor js-anchor">
           <span>Scroll</span>
         </a>
@@ -24,20 +24,25 @@
       <section id="animation" class="bl_section">
         <div class="bl_section_inner">
           <p class="bl_section_text">
-            スクロールに合わせて<br />動くアニメーションや
+            <span>スクロールに合わせて</span><br /><span
+              >動くアニメーションや</span
+            >
           </p>
         </div>
       </section>
       <section class="bl_section bl_section__right">
         <div class="bl_section_inner">
-          <p class="bl_section_text">モーダルとも<br />一緒に使えます</p>
+          <p class="bl_section_text">
+            <span>モーダルとも</span><br /><span>一緒に使えます</span>
+          </p>
           <button class="el_button js-modal-open-button">モーダルを開く</button>
         </div>
       </section>
       <section class="bl_section">
         <div class="bl_section_inner">
           <p class="bl_section_text">
-            スマートフォンだけ<br />慣性スクロールを<br />offすることもできます
+            <span>スマートフォンだけ</span><br /><span>慣性スクロールを</span
+            ><br /><span>offすることもできます</span>
           </p>
         </div>
       </section>
@@ -45,7 +50,7 @@
     <dialog id="modal" class="bl_modal">
       <div class="bl_modal_inner">
         <p class="bl_modal_text">
-          Lenisではこのようなモーダルやハンバーガーメニューなど、画面上に重なり合った要素の制御も簡単にできます。
+          Lenisではモーダルやハンバーガーメニューなど、画面上に重なり合った要素の制御も簡単にできます。
         </p>
         <p class="bl_modal_text">
           stop()メソッドでスクロールコンテンツに"data-lenis-prevent"属性を付与し、スクロールを止めることができます。
