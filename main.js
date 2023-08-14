@@ -1,5 +1,5 @@
 import { setupLenis } from "./src/scripts/lenis.js";
-import { init } from "./src/scripts/three/init.js";
+import { setupBackground } from "./src/scripts/three/setupAnimation.js";
 const setup = () => {
   const lenis = setupLenis();
 
@@ -20,18 +20,8 @@ const setup = () => {
     lenis.start();
   });
 
-  init(lenis);
-
-  // const log = () => {
-  //   console.log(lenis.animatedScroll, lenis.velocity)
-  //   window.requestAnimationFrame(log);
-  // }
-
-  // log();
-
-  // window.requestAnimationFrame(() => {
-  //   console.log(lenis.animatedScroll, lenis.velocity)
-  // })
+  // アニメーションの設定
+  setupBackground(lenis);
 };
 
 setup();

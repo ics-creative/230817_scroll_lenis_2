@@ -73,11 +73,12 @@ canvas {
   display: flex;
   flex-direction: column;
   gap: 40px;
-  width: 50%;
+  width: 25%;
+  text-align: center;
 }
 
 .bl_section_text {
-  font-size: 24px;
+  font-size: 18px;
   line-height: 1.8;
 }
 
