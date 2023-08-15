@@ -9,7 +9,7 @@
     "format": "yarn run __eslint && yarn run __stylelint && yarn run __prettier",
     "__eslint": "eslint **/*.js --fix",
     "__stylelint": "stylelint '**/*.css' --fix",
-    "__prettier": "prettier --write \"**/*.{js,json,css,html}\" --ignore-path .gitignore"
+    "__prettier": "prettier --write \"**/*.{js,json,css,html}\""
   },
   "devDependencies": {
     "eslint": "^8.47.0",

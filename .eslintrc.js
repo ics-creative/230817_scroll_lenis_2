@@ -29,4 +29,5 @@ module.exports = {
     sourceType: "module",
   },
   rules: {},
+  ignorePatterns: ["docs/", "vite.config.js"],
 };
