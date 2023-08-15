@@ -19,6 +19,7 @@ export const setupBackground = async (lenis) => {
     if (model) {
       // スクロールの強さに応じてモデルを回転させる
       model.rotation.y += 0.01 + Math.abs(lenis.velocity * 0.005);
+      Math.abs(lenis.velocity) > 0.01 && console.log(lenis.velocity);
     }
 
     renderer.render(scene, camera);
