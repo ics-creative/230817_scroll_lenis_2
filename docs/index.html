@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>慣性スクロールのデモ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    
+    <script type="module" crossorigin src="./assets/index-5abef968.js"></script>
+    <link rel="stylesheet" href="./assets/index-4eddea6b.css">
+  </head>
+  <body>
+    <main>
+      <canvas class="webgl"></canvas>
+      <section class="bl_hero">
+        <h1 class="bl_hero_text"><span>Welcome to Smooth Scroll Demo</span></h1>
+        <a href="#animation" class="el_anchor js-anchor">
+          <span>Scroll</span>
+        </a>
+      </section>
+      <section id="animation" class="bl_section">
+        <div class="bl_section_inner">
+          <p class="bl_section_text">
+            <span>スクロールに合わせて</span><br /><span
+              >動くアニメーションや</span
+            >
+          </p>
+        </div>
+      </section>
+      <section class="bl_section bl_section__right">
+        <div class="bl_section_inner">
+          <p class="bl_section_text">
+            <span>モーダルとも</span><br /><span>一緒に使えます</span>
+          </p>
+          <button class="el_button js-modal-open-button">モーダルを開く</button>
+        </div>
+      </section>
+      <section class="bl_section">
+        <div class="bl_section_inner">
+          <p class="bl_section_text">
+            <span>スマートフォンだけ</span><br /><span>慣性スクロールを</span
+            ><br /><span>offすることもできます</span>
+          </p>
+        </div>
+      </section>
+    </main>
+    <dialog id="modal" class="bl_modal">
+      <div class="bl_modal_inner">
+        <p class="bl_modal_text">
+          Lenisではモーダルやハンバーガーメニューなど、画面上に重なり合った要素の制御も簡単にできます。
+        </p>
+        <p class="bl_modal_text">
+          stop()メソッドでスクロールコンテンツに"data-lenis-prevent"属性を付与し、スクロールを止めることができます。
+        </p>
+        <button class="el_button el_button__dark js-modal-close-button">
+          モーダルを閉じる
+        </button>
+      </div>
+    </dialog>
+    
+  </body>
+</html>
