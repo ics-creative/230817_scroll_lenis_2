@@ -8,6 +8,7 @@ export const setupBackground = async (lenis) => {
 
   const { scene, camera } = createEnvironment();
 
+  // アニメーションさせるモデル(うさぎ)を読み込む
   const model = await loadModel();
   scene.add(model);
 
@@ -16,6 +17,7 @@ export const setupBackground = async (lenis) => {
   handleResize(camera, renderer);
 
   const tick = () => {
+    // model(うさぎ)の読み込みが完了してからアニメーションを実行する
     if (model) {
       // スクロールの強さに応じてモデルを回転させる
       model.rotation.y += 0.01 + Math.abs(lenis.velocity * 0.005);

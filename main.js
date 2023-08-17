@@ -7,7 +7,12 @@ const setup = () => {
   // アンカーリンクを取得
   const anchor = document.querySelector(".js-anchor");
   // クリック時に目的の箇所までスクロールする
-  anchor.addEventListener("click", () => lenis.scrollTo("#animation"));
+  anchor.addEventListener("click", (e) => {
+    // urlを変更しないようにする
+    e.preventDefault();
+    // スクロール
+    lenis.scrollTo("#animation");
+  });
 
   // モーダルを開くボタン
   const openButton = document.querySelector(".js-modal-open-button");
