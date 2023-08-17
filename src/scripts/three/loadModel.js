@@ -1,10 +1,7 @@
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 
-export const loadModel = () => {
+export const loadModel = async () => {
   const gltfLoader = new GLTFLoader();
-  return new Promise((resolve) => {
-    gltfLoader.load("assets/models/rabbit.glb", (gltf) => {
-      resolve(gltf.scene);
-    });
-  });
+  const model = await gltfLoader.loadAsync("assets/models/rabbit.glb");
+  return model.scene;
 };

@@ -1,7 +1,8 @@
 import Lenis from "@studio-freight/lenis";
 
 /**
- * Lenisの初期設定を行います
+ * Lenisの初期設定を行います。
+ * @return {Lenis} Lenisのインスタンス
  */
 export const setupLenis = () => {
   const lenis = new Lenis({

@@ -1,7 +1,7 @@
 import { setupLenis } from "./src/scripts/lenis.js";
 import { setupBackground } from "./src/scripts/three/setupAnimation.js";
 const setup = () => {
-  // Lenisを設定
+  // 設定を行ったLenisのインスタンスを作成
   const lenis = setupLenis();
 
   // アンカーリンクを取得
