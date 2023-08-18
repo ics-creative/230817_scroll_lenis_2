@@ -197,7 +197,15 @@ canvas {
     font-size: 20px;
   }
 
+  .bl_section {
+    padding: 40px;
+  }
+
   .bl_section_inner {
     width: 100%;
+  }
+
+  .bl_modal {
+    width: 80%;
   }
 }
