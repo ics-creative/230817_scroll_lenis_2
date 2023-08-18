@@ -37,6 +37,9 @@ canvas {
 
 .lenis.lenis-smooth {
   scroll-behavior: auto;
+
+  /* スクロールバーがなくなってがたつくのを防ぐ */
+  scrollbar-gutter: stable;
 }
 
 .lenis.lenis-smooth [data-lenis-prevent] {
